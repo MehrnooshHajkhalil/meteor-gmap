@@ -1,0 +1,17 @@
+<template name="point">
+    <li class="list-group-item">
+        <div class="small">
+            <b>Date: </b>{{createdAt}}
+        </div>
+        <span class="small"><b>Lat: </b>{{lat}}</span>
+        <br/>
+        <span class="small"><b>Lon: </b>{{lon}}</span>
+        <br/>
+        <div class="btn-group">
+            <button class="delete-point btn btn-danger" title="Delete point" >&times;</button>
+            <button class="load-point btn btn-info" title="Show on map" >
+                <i class="glyphicon glyphicon-map-marker" ></i>
+            </button>
+        </div>
+    </li>
+</template>

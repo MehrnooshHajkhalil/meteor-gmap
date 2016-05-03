@@ -1,0 +1,26 @@
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="toolbox">
+                <span class="text-gray text-right pull-right" >Total Points: {{pointsCount}}</span>
+                <button class="find-me btn btn-primary pull-left">Find me</button>
+                <div class="points-list">
+                    <ul class="list-group">
+                        {{#if pointsCount}}
+                            {{#each points}}
+                                {{> point}}
+                            {{/each}}
+                        {{else}}
+                            <li>
+                                <h5 class=" text-center">You have not any saved point</h5>
+                            </li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+            <div class="map-container">
+                {{> googleMap name="exampleMap" options=exampleMapOptions}}
+            </div>
+        </div>
+    </div>
+</body>
